@@ -14,7 +14,7 @@ class BruteForceSolution:
         return currentMaxArea
     
     
-class workingSolution:
+class WorkingSolution:
     def MaxArea(self, height) -> int:
         
         maxAreaResult = 0
