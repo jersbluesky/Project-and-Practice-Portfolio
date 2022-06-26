@@ -1,5 +1,5 @@
 
-s = input("Enter a number between 1 and 3999: ")
+s = input("Enter a number between 1 and 3499: ")
 s = str(s)
 length = len(s)
 romNum = ""
