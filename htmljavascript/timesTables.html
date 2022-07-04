@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Times Table</title>
+
+<script>
+
+function timesTable() {
+let output = ""
+let i = 1;
+chosen_number = parseInt(document.getElementById("chosen_number").value);
+table_length = parseInt(document.getElementById("table_length").value);
+while (i <= table_length) {
+    multiply = i * chosen_number;
+    output += i + " = " + multiply + "<br>"; 
+    i++;
+    }
+
+    document.getElementById('displayDiv').innerHTML = output;
+}
+</script>
+</head>
+
+<body>
+    <label for="chosen_number">Pick any number:</label>
+    <input type="number" id="chosen_number" name="chosen_number" required>
+    <label for="table_length">Enter a table length:</label>
+    <input type="number" id="table_length" name="table_length" required>
+    <button type="button" onclick="timesTable()">submit</button>  
+    <div id="displayDiv"></div>  
+</body>
+</html>
