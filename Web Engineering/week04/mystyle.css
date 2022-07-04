@@ -1,0 +1,83 @@
+#header {
+    background-image:url('pianoswirl1.jpg');
+    background-repeat:no-repeat;
+    background-size: 100% 100px;
+    height: 100px;
+    width: 100%;
+}
+body {
+    background-image: url('oldmusic.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  } 
+
+.headerfont1 {
+    color: white;
+    margin-left: 148px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size:x-large;
+    
+}
+.headerfont2 {
+    color: black;
+    margin-left: 500px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size:x-large;
+    }
+.fancyline {
+    border: 10px ridge rgb(78, 78, 78);
+    width: 97.5%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    
+    }    
+li {
+    float: left;
+
+}
+li a {
+    display: block;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size: x-small;
+    text-align: center;
+    padding: 5px 50px;
+    text-decoration: none;
+    margin-left: 100px;
+    }
+li a:hover:not(.active) {
+    background-color: #111;
+    }
+.active {
+    background-color: rgb(90, 81, 81);
+    }
+
+.textbox1 {
+    background-image: linear-gradient(rgb(90, 81, 81), black);
+    width: 800px;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    text-align: center;
+}
+
+.textbox2 {
+    background-color: rgba(204, 204, 204, 0.5);
+    width: 800px;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+
+}
+
+
+

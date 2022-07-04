@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Mortgage Calculator</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<script>
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2
+      })
+    
+      function resetForm() {
+        document.getElementById("loanCalculator").reset();
+    }
+    
+</script>
+</head>
+
+<body>
+<h1>Monthly Payment Calculator</h1>
+<form id="loanCalculator" action="mortgage.php" method="GET">
+    <p>Loan Amount: <input type="number" name="principal" min="1"></p>
+    <p>APR: <input type="float" name="apr" required min="1" max="25"></p>
+    <p>Loan Term: <input type="number" name="yrs" required></p>
+    <input type="submit" value="Calculate Payment">
+    <input type="button" onclick="resetForm()" value="Reset form">
+</form>
+
+
+</body>
+</html>

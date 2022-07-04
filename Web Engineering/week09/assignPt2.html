@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+          
+          tr:nth-child(even) {
+            background-color: #dddddd;
+          }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    File Name: <input type="text" id="file1" value="json.txt"><br>
+    <button onclick="loadDoc()">Load file</button><br>
+    <div id="outputDiv"></div>
+
+
+
+    <script>
+        function loadDoc() {
+            file = String((document.getElementById("file1").value) + "?");
+            const xhr = new XMLHttpRequest();
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    try {
+                    const resObj = JSON.parse(this.responseText);
+                    populateStudents(resObj);
+                    } catch (e) {
+                    console.warn('There was an error in the JSON. Could not parse!')
+                    }
+                }
+                else {
+                    console.warn('Did not receive 200 OK from response!');
+                }
+
+            };
+
+            xhr.open('GET', file);
+            xhr.send();
+        }
+        
+        function populateStudents(resObj) {
+            var table = "<table><tr><th>First</th><th>Last</th><th>Address</th><th>Major</th><th>GPA<th></tr>";
+            console.log(resObj);
+            for (i = 0; i < resObj.students.length; i++) {
+                table += "<tr>";
+                table += "<td>" + resObj.students[i].first + "</td>";
+                table += "<td>" + resObj.students[i].last + "</td>";
+                table += "<td>" + resObj.students[i].address.city + " " + resObj.students[i].address.state + " " + resObj.students[i].address.zip + "</td>";
+                table += "<td>" + resObj.students[i].major + "</td>";
+                table += "<td>" + resObj.students[i].gpa + "</td>"; 
+                table += "</tr>"
+                }
+            console.log(table);
+            document.getElementById("outputDiv").innerHTML = table;
+            }
+
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#flex_first {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1rem;
+}
+
+.center_list {
+    align-self: center;
+}
+
+#hair,
+#cookie,
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+#grid_first {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+    #grid_first {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #grid_first {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+#grid_second {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
+    gap: 1rem;
+}
+
+.box9 {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+    #grid_second {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px 100px 100px 100px;
+    }
+
+    #grid_second .box1 {
+        grid-area: 1 / 1 / span 2 / span 2;
+    }
+
+    #grid_second .box9 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* 3. Large size: */
+/* a. Place the divs in 3 columns of equal widths. */
+/* b. Box1 must span 3 columns and take up 2 rows. */
+/* c. The contents of box9 must still be placed in a row and centered within box9, but cannot wrap. */
+@media screen and (min-width: 1200px) {
+    #grid_second {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px 100px 100px;
+    }
+
+    #grid_second .box1 {
+        grid-column: 1 / span 3;
+    }
+
+    #grid_second .box9 {
+        flex-wrap: nowrap;
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<!-- Functions can be placed in the head -->
+<head>
+    <script>
+    function myFunction() {
+      document.getElementById("demo5").innerHTML = "Paragraph changed.";
+    }
+    </script>
+    <script src="myScript.js"></script>
+</head>
+
+<body>
+
+<!-- INTRODUCTION -->
+<h2>My First JavaScript</h2>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+<hr>
+<!-- CONTENT -->
+
+<h2>What Can JavaScript Do?</h2>
+
+
+<!-- BUTTON ON CLICK - CHANGE CONTENT -->
+<p id="demo1">JavaScript can change HTML content.</p>
+
+<!-- Code -->
+<button type="button" onclick='document.getElementById("demo1").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<hr>
+
+<!-- BUTTON ON CLICK - CHANGE ATTRIBUTE VALUES -->
+<p>JavaScript can change HTML attribute values.</p>
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<!-- Code -->
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+<hr>
+
+<!-- BUTTON ON CLICK - CHANGE STYLE OF AN ELEMENT -->
+<p id="demo2">JavaScript can change the style of an HTML element.</p>
+
+<!-- Code -->
+<button type="button" onclick="document.getElementById('demo2').style.fontSize='35px'">Click Me!</button>
+
+<hr>
+
+<!-- BUTTON ON CLICK - HIDE HTML ELEMENTS -->
+<p id="demo3">JavaScript can hide HTML elements.</p>
+
+<!-- Code -->
+<button type="button" onclick="document.getElementById('demo3').style.display='none'">Click Me!</button>
+
+<hr>
+
+<!-- BUTTON ON CLICK - SHOW HIDDEN HTML ELEMENTS -->
+<p>Javasctipt can show hidden HTML elements.</p>
+
+<p id="demo4" style="display:none">Hello JavaScript!</p>
+
+<!-- Code -->
+<button type="button" onclick="document.getElementById('demo4').style.display='block'">Click Me!</button>
+
+<hr>
+
+<!-- Javascript placed in head section -->
+<h2>Demo JavaScript in Head</h2>
+<!-- Code -->
+<p id="demo5">A Paragraph.</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+<!-- Javascript placed in head section -->
+<h2>Demo JavaScript in Head</h2>
+<!-- Code -->
+<p id="demo6">A Paragraph.</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+<hr>
+
+<!-- Using innerHTML -->
+<p>Using innerHtml</p>
+
+<!-- Code -->
+<p id="demo7"></p>
+<p> code used: document.getElementById("demo7").innerHTML = 5 + 14;</p>
+<script>
+document.getElementById("demo7").innerHTML = 5 + 14;
+</script>
+
+<hr>
+
+<!-- Using document.write -->
+<p>Using document.write</p>
+<p><em>Never call document.write after the document has finished loading.
+    It will overwrite the whole document.</em></p>
+    
+    <script>
+    document.write(5 + 6);
+    </script>
+
+<hr>
+
+<!-- Break it -->
+
+<button type="button" onclick="document.write(5 + 6)">Click this to break the page</button>
+
+<hr>
+
+<!-- This is how you summon the alert box -->
+
+<p>Alert!</p>
+
+<!-- Code -->
+<button onclick="whatIAm()">What are you?</button>\
+<script>
+    function whatIAm() {
+        alert("I am an alert box!");
+    }
+</script>
+
+<hr>
+
+<!-- Put things in the console log-->
+<p>This puts things into the console log</p>
+<p>console.log(5 + 6);</p>
+
+<!-- Code -->
+<script>
+    console.log(5 + 6);
+</script>
+
+<hr>
+
+<!-- This is how you print -->
+<p>Print the window</p>
+
+<!-- Code -->
+<button onclick="window.print()">Print this page</button>
+
+</body>
+</html> 

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Loan Calculator</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<script src="myScript.js"></script>
+</head>
+
+<body>
+<h1>LOAN CALCULATOR</h1>
+<form id="loanCalculator">
+    <p>Loan Amount: <input type="number" id="principal"></p>
+    <p>APR: <input type="number" id="apr"></p>
+    <p>Loan Term: <input type="number" id="yrs"></p>
+    <button type="button" onclick="calculatePayment()">Calculate Payment</button>
+    <div id='outputDiv1'></div>
+    <input type="button" onclick="resetForm()" value="Reset form">
+</form>
+</body>
+</html>
