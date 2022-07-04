@@ -1,7 +1,7 @@
 """
 File: pong.py
-Original Author: Br. Burton
-Designed to be completed by others
+Basic Template - Br. Burton
+Designed and Completed by Jeremy Johnson
 This program implements a simplistic version of the
 classic Pong arcade game.
 """
