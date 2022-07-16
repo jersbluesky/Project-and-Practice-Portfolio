@@ -8,9 +8,7 @@
 import time
 import numpy as np
 
-class Percent(float):
-    def __str__(self):
-        return '{:.2%}'.format(self)
+from percent import Percent
 
 class DivisibleBy:
     def __init__(self, prob_list_1, chosen_int) -> None:
@@ -27,7 +25,7 @@ class DivisibleBy:
         probability = Percent(nA / nS)
         print(probability)        
     
-size = np.random.randint(10000, 1000000)
+size = np.random.randint(5, 1000001)
 print(size)
 prob_list_1= np.random.randint(1,100000,size)
 
