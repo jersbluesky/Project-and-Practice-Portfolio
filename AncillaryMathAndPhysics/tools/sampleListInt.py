@@ -38,8 +38,8 @@ class ListArray:
         list = array.set_list_array()
         return array.get_list_array()
 
-# TO CALL:
-createArray = ListArray()
-testList = createArray.execute()
-# To test:
-print(testList)
+# # TO CALL:
+# createArray = ListArray()
+# testList = createArray.execute()
+# # To test:
+# print(testList)
