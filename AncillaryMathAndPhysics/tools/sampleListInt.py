@@ -1,7 +1,9 @@
 # This tool creates a List Array of a sample size provided by the
-# user.
+# user. The size of the array is randomly set.
 
-from typing import List
+# Author: Jeremy Johnson
+# Date: 7-17-2022
+
 import numpy as np
 
 class ListArray:
