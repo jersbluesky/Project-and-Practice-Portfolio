@@ -14,9 +14,12 @@
 # Will adjust to randomly import the circumference of the circle
 # and the area of the smaller circle (which must be smaller).
 
-from percent import Percent as per
 import numpy as np
 import time
+import sys
+sys.path.insert(0, 'c:/Users/Predator/Desktop/Applied Technology/Practiceandproblems/practiceandproblems/AncillaryMathAndPhysics/')
+from tools.percent import Percent as per
+
 
 class CircleProbability:
     def __init__(self, large_circle_area, small_circle_area):

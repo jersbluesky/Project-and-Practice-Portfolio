@@ -4,11 +4,11 @@
 
 # If a number is randomly chosen from the following list, what is the
 # probability that the number is a multiple of any given input?
-
 import time
+import sys
+sys.path.insert(0, 'c:/Users/Predator/Desktop/Applied Technology/Practiceandproblems/practiceandproblems/AncillaryMathAndPhysics/tools')
 import numpy as np
-
-from percent import Percent
+from tools.percent import Percent
 
 class DivisibleBy:
     def __init__(self, prob_list_1, chosen_int) -> None:
