@@ -12,15 +12,43 @@ class ListArray:
         self._template_array = []
         
     def get_array_size(self):
-        self._array_size = int(input("Array size: "))
+        while True:
+            try:
+                self._array_size = int(input("Array size (must be positive): "))
+                tryAgain = True
+                while tryAgain == True:
+                    if self._array_size < 0:
+                        self._array_size = int(input("Try again. It must be a POSITIVE integer: "))
+                        tryAgain = True   
+                    else:
+                        tryAgain = False 
+                break
+            except ValueError:
+                print("Try again. It must be a positive INTEGER: ")
+                continue    
+        return self._array_size   
+
+            
         return self._array_size
     
     def get_max_int(self):
-        self._max_int = int(input("Max integer: "))
+        while True:
+            try:
+                self._max_int = int(input("Max integer: "))
+                break
+            except ValueError:
+                print("It must be an INTEGER. Try again. ")
+                continue  
         return self._max_int
     
     def get_min_int(self):
-        self._min_int = int(input("Min integer: "))
+        while True:
+            try:
+                self._min_int = int(input("Min integer: "))
+                break
+            except ValueError: 
+                print("It must be an INTEGER. Try again. ")
+                continue
         return self._min_int
         
     def set_list_array(self):
@@ -38,8 +66,8 @@ class ListArray:
         list = array.set_list_array()
         return array.get_list_array()
 
-# # TO CALL:
-# createArray = ListArray()
-# testList = createArray.execute()
-# # To test:
-# print(testList)
+# TO CALL:
+createArray = ListArray()
+testList = createArray.execute()
+# To test:
+print(testList)
