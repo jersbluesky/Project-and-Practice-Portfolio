@@ -1,8 +1,10 @@
-# This tool creates a List Array of a sample size provided by the
-# user. The size of the array is randomly set.
+# This tool creates a List Array of a sample size provided by 
+# the user. The size of the array is randomly set. It could 
+# populate an empty array, and can output duplicate integers.
 
 # Author: Jeremy Johnson
 # Date: 7-17-2022
+
 
 import numpy as np
 
@@ -26,8 +28,10 @@ class ListArray:
         array = ListArray()
         size = array.sample_size()
         list = array.set_list_array()
-        print(array.get_list_array())
+        return array.get_list_array()
 
-
-# set1 = ListArray()
-# set1.execute()
+# TO CALL:
+# createArray = ListArray()
+# testList = createArray.execute()
+# # To test:
+# print(testList)
